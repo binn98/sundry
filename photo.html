@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>c3特效</title>
+  <style>
+    .warp{
+      width: 100%;
+      margin: 0 auto;
+    }
+    .photo{
+      text-align: center;
+      width: 200px;
+      height: 300px;
+      overflow: hidden;
+      
+    }
+    img{
+      display: inline-block;
+      transition:all 8s;
+      transform: translateY(0px);
+    }
+    img:hover{
+      transition:all 8s;
+      transform: translateY(-420px);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="warp">
+    <div class="photo">
+      <img src="./image/Snipaste_2020-05-27_16-08-03.png">
+    </div>
+  </div>
+</body>
+</html>

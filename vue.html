@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    {{message}}
+  </div>
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+<script src="./axios.js"></script>
+<script>
+  let ajax = axios()
+  // console.log(ajax);
+  Vue.prototype.$ajax =ajax
+  var app = new Vue({
+    
+    el:'#app',
+    data:{
+      message:'vue实例创建成功'
+    },
+    mounted() {
+      // console.log(this.$appName)
+      // console.log(this.axios);
+      console.log(Vue.prototype.$ajax);
+      // console.log(Vue.prototype);
+      this.$ajax({url:'account/accountuser'}).then(res=>{
+        console.log(res);
+      })
+  },
+  methods:{
+    // axios(){
+    //   console.log('axios');
+    // }
+  }
+  })
+  // app.prototype.$appName = 'appname'
+  
+  
+</script>
+</html>
